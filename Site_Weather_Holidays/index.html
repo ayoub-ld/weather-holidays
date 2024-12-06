@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will my holiday be ruined?</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+    </style>
+    <script src="./scripts/index.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
+      integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo-2.png" alt="Logo" id="logo" />
+    </header>
+    <main>
+      <div class="container">
+        <h1>Will my holiday be ruined by rain or by a tornado?</h1>
+        <div class="cards-container"></div>
+      </div>
+      <div class="modal" id="weatherModal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modalTitle"></h2>
+          <table id="forecastTable">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Temperature</th>
+                <th>Weather</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody id="forecastBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <footer>Created in December 2024 by <a href="">Ayoub</a> &copy;</footer>
+    </main>
+  </body>
+</html>

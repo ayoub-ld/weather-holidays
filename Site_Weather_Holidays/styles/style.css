@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Goldman", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  scrolling-behavior: smooth;
+}
+header,
+footer {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #403d39;
+  color: #fff;
+  font-weight: 300;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  #logo {
+    width: 250px;
+    height: 65px;
+  }
+}
+footer {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* Allow main to grow */
+main {
+  flex: 1;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin: 2rem 0rem;
+  h1 {
+    padding-top: 3rem;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  width: 90vw;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(
+    33.33% - 20px
+  ); /* Adjust width to fit 3 cards per row with margins */
+  height: 45rem;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  width: 85%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+h2 {
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15vh 12vw;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 75%;
+  height: 66%;
+  border-radius: 10px;
+  overflow: auto; /* Add scrolling if content overflows */
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+table {
+  font-weight: 400;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  flex: 1; /* Take remaining space */
+  overflow: auto; /* Enable scrolling for table content */
+}
+
+th,
+td {
+  font-size: 1.8rem;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+th {
+  background-color: #fefefe; /* Ensures header cells are opaque */
+  position: relative; /* Creates new stacking context */
+  padding: 15px 12px; /* Increased vertical padding */
+  border-bottom: 2px solid #ddd; /* More visible border */
+}
+
+/* Optional: Add transition for smooth shadow effect */
+thead {
+  transition: box-shadow 0.3s ease;
+}
+/* Add wrapper for table to control overflow */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  position: relative;
+  background-color: #fefefe;
+}
